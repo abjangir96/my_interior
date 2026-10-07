@@ -1,63 +1,24 @@
-# My Interior
+# Mr. ArtistA website
+Static site for GitHub Pages. Upload all files to your repository root (delete the old `services.html` and old `images/favicon.svg`).
 
-A premium static website for an interior design and custom furniture studio, built using HTML5, CSS3, and vanilla JavaScript.
+## Change phone, address, email
+Open `js/site.js`, edit the first line (`S`). Address, hours and email stay hidden until you fill them in.
 
-## Included pages
-- Home
-- About Us
-- Services
-- Portfolio
-- Products
-- Contact
+## Where to put your photos
+Add `?guide` to any page address (example: `products.html?guide`) to see the file name each photo slot expects.
+Use `.jpg`, about 1600 px wide, under 400 KB each (squoosh.app shrinks phone photos). File names must match exactly.
 
-## Project structure
-/
-├── index.html
-├── about.html
-├── services.html
-├── portfolio.html
-├── products.html
-├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   ├── favicon.svg
-│   └── .gitkeep
-└── README.md
+| Photo | Upload to |
+|---|---|
+| Product photos (3 per product; 01 is also the home page panel) | `images/products/<product>/01.jpg`, `02.jpg`, `03.jpg` |
+| Our Work gallery (2 per product) | `images/gallery/<product>-1.jpg`, `<product>-2.jpg` |
+| Store photos (About page) | `images/store/01.jpg` (large), `02.jpg`, `03.jpg` |
 
-## Features
-- Mobile-first responsive layout
-- Premium luxury design aesthetic
-- Sticky navigation and mobile menu
-- Scroll reveal animations
-- Portfolio filtering and lightbox preview
-- Back-to-top button
-- Contact form styling and WhatsApp CTA
-- SEO-friendly meta tags and Open Graph support
-- GitHub Pages compatible structure
+Product folder names: `artwood`, `resin-art`, `modular-interiors`, `mandir`, `premium-doors`, `sagwan`, `aluminium-glass`, `kids-toys`.
+On GitHub: open the folder, choose Add file, Upload files. Until a photo exists, the slot shows a material swatch.
 
-## Local preview
-Open `index.html` directly in a browser, or serve the folder locally with a simple static server:
+## Contact form
+The form opens WhatsApp with the visitor's details filled in. For email delivery, create a free Formspree form and paste its URL into `endpoint` in `js/site.js`.
 
-```bash
-python3 -m http.server 8000
-```
-
-Then visit:
-`http://localhost:8000`
-
-## GitHub Pages deployment
-1. Push this project to your GitHub repository.
-2. Open the repository on GitHub.
-3. Go to Settings > Pages.
-4. Under Source, select the main branch (or the branch you are using).
-5. Choose the root folder `/` as the deployment source.
-6. Save the settings.
-7. GitHub will provide a public URL for your site.
-
-## Notes
-- The design uses remote Unsplash images as placeholder content for an elegant interior design aesthetic.
-- Content is static and does not require a backend.
-- You can replace sample text, branding, and images with your real business details as needed.
+## Text
+Product names and descriptions are in `js/site.js` (list `P`). Other text is in each `.html` file.
